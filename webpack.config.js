@@ -10,25 +10,39 @@ const VENDOR_LIBS = [
 
 module.exports = {
   entry: {
+    'babel-polyfill': ['babel-polyfill'],
     bundle: './src/index.js',
     vendor: VENDOR_LIBS
   },
   module: {
     rules: [
-      /* JS */
       {
         test: /\.js?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}  
+          }
+        ]
+      },
       /* SCSS */
       {
-        test: /\.scss?$/,
-        use: ExtractTextPlugin.extract({
+        test: /\.scss$/,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
+          use: [/*'css-loader', 'sass-loader'*/
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]'
+              }
             },
             {
               loader: 'postcss-loader',
@@ -42,7 +56,7 @@ module.exports = {
               loader: 'sass-loader'
             }
           ]
-        })
+        }))
       }
     ]
   },
@@ -52,11 +66,13 @@ module.exports = {
   },
   resolve: {
    extensions: ['.js']
- },
+  },
   devServer: {
     contentBase: './dist',
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    disableHostCheck: true,
+    host: "0.0.0.0"
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -67,6 +83,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new ExtractTextPlugin('style.css')
   ]
 }

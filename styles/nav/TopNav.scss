@@ -1,0 +1,97 @@
+@import '../utils';
+
+
+.NavFrame {
+	//background-color: #FFF;
+	height: 90px;
+	margin: 0 auto;
+	//border: 2px solid orange;
+}
+.Navbar {
+	margin: 0 auto;
+	width: 1100px;
+	//border: 1px solid red;
+	position: relative;
+	overflow: hidden;
+	
+	@include media("<huge") {
+	width: 1024px;
+	}
+
+	@include media("<large") {
+	width: 100%
+	}
+
+	@include media("<medium") {
+	width: 100%;
+	}
+}
+.logoBox {
+	margin-left: 10px;
+	float: left;
+	margin-top: 15px;
+	//border: 1px solid pink;
+	img {
+		width: 230px;
+	}
+	@include media("<huge") {
+	
+	}
+
+	@include media("<large") {
+		margin-left: 20px;
+	}
+
+	@include media("<medium") {
+	
+	}
+}
+.NavMenu {
+	//border: 1px solid blue;
+	float: right;
+	margin: 40px 0 10px 0;
+	
+	ul {
+		list-style: none;
+		//border: 1px solid red;
+		overflow: hidden;
+	}
+	ul li {
+	    display: inline-block;
+	    margin-right: 3em;
+	    float: left;
+	    //border: 1px solid green;
+	}
+	ul li a {
+		color: #333;
+		font-weight: bold;
+  		text-decoration: none;
+  		font-size: 14px;
+  		letter-spacing:2px;
+	}
+	ul li a:hover {
+		color: #DDD;
+	}
+	ul li a.active {
+		cursor: default;
+	}
+	ul li a strong {
+		margin-right: 10px;
+		color: $garamYellow;
+	}
+	@include media("<huge") {
+		ul li {
+			margin-right: 2em;
+		}
+	}
+
+	@include media("<large") {
+		ul li {
+			margin-right: 1em;
+		}
+	}
+
+	@include media("<medium") {
+		display: none;
+	}
+}
