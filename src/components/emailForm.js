@@ -46,11 +46,7 @@ const MaterialUiForm = props => {
       </h5>
       <MuiThemeProvider>
         <form onSubmit={handleSubmit((props) => {
-<<<<<<< HEAD
           axios.post('http://www.garamfood.org:8081/sendEmail', props)
-=======
-          axios.post('http://localhost:3000/sendEmail')
->>>>>>> 13aab7ae64147abb2ceb7300d6b1a8451b1129a1
           .then(res => {
             console.log("Response from Server");
             console.log(res);
