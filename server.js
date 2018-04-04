@@ -6,11 +6,7 @@ const smtpTransport = require('nodemailer-smtp-transport')
 
 var bodyParser = require('body-parser');
 var app = express();
-<<<<<<< HEAD
 var PORT = process.env.PORT || 8081
-=======
-var PORT = process.env.PORT || 3000
->>>>>>> 13aab7ae64147abb2ceb7300d6b1a8451b1129a1
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
