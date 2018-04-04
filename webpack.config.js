@@ -10,6 +10,7 @@ const VENDOR_LIBS = [
 
 module.exports = {
   entry: {
+    'client': 'webpack-dev-server/client?http://0.0.0.0:8080',
     'babel-polyfill': ['babel-polyfill'],
     bundle: './src/index.js',
     vendor: VENDOR_LIBS
@@ -62,7 +63,8 @@ module.exports = {
   },
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '/dist/'),
+    publicPath: '/'
   },
   resolve: {
    extensions: ['.js']

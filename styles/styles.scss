@@ -1,7 +1,12 @@
 @import './nav/TopNav.scss';
 @import './nav/BtnNav.scss';
-
+@import './nav/LeftNav.scss';
+html {
+    height: 100%;
+}
 body {
+	height: 100%;
+	position: relative;
 	font-family: 'Roboto', sans-serif;
 	font-family: 'Nanum Gothic', sans-serif;
 }

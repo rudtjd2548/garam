@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -61,12 +62,28 @@ export default class DrawerUndocked extends React.Component {
                   <h3 className={Dstyles.profileText}><a href="tel:031-1577-5709">1577-5709</a></h3>
                   <h3 className={Dstyles.profileName}>참가람식자재</h3>
                   <Divider />
-                  <MenuItem onClick={this.handleClose}>견적문의</MenuItem>
+
+                  <MenuItem onClick={this.handleClose}>
+                    <NavLink to="/page/IntroCompany" className={Dstyles.Dlink}>
+                      회사소개
+                    </NavLink>
+                  </MenuItem>
                   <Divider />
-                  <MenuItem onClick={this.handleClose}>회사소개</MenuItem>
+
+                  <MenuItem onClick={this.handleClose}>
+                    <NavLink to="/page/emailForm" className={Dstyles.Dlink}>
+                      견적문의
+                    </NavLink>
+                  </MenuItem>
                   <Divider />
-                  <MenuItem onClick={this.handleClose}>찾아오시는 길</MenuItem>
+
+                  <MenuItem onClick={this.handleClose}>
+                    <NavLink to="/page" className={Dstyles.Dlink}>
+                      찾아오시는 길
+                    </NavLink>
+                  </MenuItem>
                   <Divider />
+
                   <MenuItem onClick={this.handleClose}>ENGLISH</MenuItem>
                   <Divider />
                 </Drawer>

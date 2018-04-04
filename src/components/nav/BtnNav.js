@@ -14,9 +14,8 @@ import Radium, {StyleRoot} from 'radium';
 
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTruck, faCircle } from '@fortawesome/fontawesome-free-solid'
-fontawesome.library.add(faTruck, faCircle);
-fontawesome.icon({ prefix: 'far', iconName: 'circle' })
+import { faHandHoldingUsd, faUtensils, faSmile } from '@fortawesome/fontawesome-free-solid'
+fontawesome.library.add(faHandHoldingUsd, faUtensils, faSmile);
 
 const styles = {
   nong: {
@@ -76,19 +75,40 @@ export default class TabsExampleSwipeable extends React.Component {
                 <div className={Bstyles.bottomBox}>
                   <div className={Bstyles.Bwidth}>
                     <div className={Bstyles.ContentsBox}>
-                      <div className={Bstyles.iconBox}>
-                        <strong className={Bstyles.strong1}><FontAwesomeIcon icon="truck"/></strong>
-                        <strong className={Bstyles.strong2}><FontAwesomeIcon icon="circle"/></strong>
+                      <span>
+                        <FontAwesomeIcon icon="hand-holding-usd"/>
+                      </span>
+                      <strong>
+                        정직한 단가
+                      </strong>
+                      <div>
+                        참가람식자재는 종합식재료업체로 각종 농,수,축,공산품을 정직한 
+                        단가로 납품하고 있습니다.
                       </div>
                     </div>
                     <div className={Bstyles.ContentsBox}>
-                      b
+                      <span>
+                        <FontAwesomeIcon icon="utensils"/>
+                      </span>
+                      <strong>
+                        신선한 재료
+                      </strong>
+                      <div>
+                        참가람식자재는 매일 새벽 가락동 농수산시장에 경매된 신선한 재료만을 유통, 
+                        납품합니다.
+                      </div>
                     </div>
                     <div className={Bstyles.ContentsBox}>
-                      c
-                    </div>
-                    <div className={Bstyles.ContentsBox}>
-                      d
+                      <span>
+                        <FontAwesomeIcon icon="smile"/>
+                      </span>
+                      <strong>
+                        최상의 서비스
+                      </strong>
+                      <div>
+                        참가람식자재는 믿을 수 있는 식자재와 더불어 직원들이 
+                        최상의 서비스를 약속드립니다.
+                      </div>
                     </div>
                   </div>
                 </div>

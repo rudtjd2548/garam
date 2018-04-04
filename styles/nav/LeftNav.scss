@@ -1,0 +1,64 @@
+@import '../utils';
+
+$borderLine: #EEE;
+
+.Lwrapper {
+  border-top: 4px solid #999;
+  width: 32%;
+  float:left;
+
+  @include media("<cus_ml") {
+	display: none;
+  }
+
+  ul {
+    list-style: none;
+    width: 300px;
+    float: right;
+    padding: 10px 0px;
+
+  @include media("<huge") {
+	width: 100%;
+	}
+
+    li {
+      border-bottom: 1px solid $borderLine;
+  
+  	li:last-child {
+      border: none;
+  	}
+
+      a {
+      	display: block;
+        padding: 30px;
+        color: #333;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+        line-height:20px;
+        letter-spacing:2px;
+      }
+    }
+  }
+}
+
+a.Llink:hover {
+	background-color: #F8F8F8;
+    font-size:17px;
+    transition:all 0.5s ease;
+}
+
+.Lcontact{
+	margin-top: 20px;
+	padding: 30px 0;
+	text-align: center;
+	h1 {
+		font-size: 30px;
+		font-weight: 800;
+
+	}
+	h2 {
+		font-weight: 700;
+		color: #526176;
+	}
+}

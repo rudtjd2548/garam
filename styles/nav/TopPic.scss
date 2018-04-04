@@ -1,0 +1,18 @@
+@import '../utils';
+
+$garamYellow: #FFD13E;
+
+.Twrapper {
+	border-top: 5px solid $garamYellow;
+	width: 100%;
+
+	@include media("<cus_ml") {
+		height:250px;
+	}
+	@include media("<cus_sm") {
+		height:200px;
+	}
+}
+.TimgBox {
+	height: 300px;
+}

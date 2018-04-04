@@ -25,6 +25,14 @@
 		padding-right: 5px;
 	}
 }
+a {
+	text-decoration: none;
+	color: #333;
+}
+a.Dlink:hover {
+	text-decoration: none;
+	color: #333;
+}
 .profileImg{
 	position: absolute;
 	top: 167px;
