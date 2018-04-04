@@ -46,7 +46,7 @@ const MaterialUiForm = props => {
       </h5>
       <MuiThemeProvider>
         <form onSubmit={handleSubmit((props) => {
-          axios.post('/emailSend')
+          axios.post('/sendEmail')
             .catch(function (error) {
               if (error.response) {
                 // The request was made and the server responded with a status code
