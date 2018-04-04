@@ -46,7 +46,11 @@ const MaterialUiForm = props => {
       </h5>
       <MuiThemeProvider>
         <form onSubmit={handleSubmit((props) => {
-          axios.post('/sendEmail')
+          axios.post('http://www.garamfood.org:8081/sendEmail', props)
+          .then(res => {
+            console.log("Response from Server");
+            console.log(res);
+          })
             .catch(function (error) {
               if (error.response) {
                 // The request was made and the server responded with a status code
@@ -65,23 +69,6 @@ const MaterialUiForm = props => {
               }
               console.log(error.config);
             })
-
-          /*
-          axios.post('/emailSend', {
-            Ename: "",
-            Ecompany: ""
-          }).then(res => {
-            console.log(res)
-          }).catch(err => {
-            console.log(err)
-          })*/
-
-/*
-          .then(function(response){
-              console.log(response.status); // ex.: 200
-          }).catch( (err) => {
-                  console.log(err)
-              });*/
         })}>
             <div><Field name="Ename" component={renderTextField} label="이름"/></div>
             <div><Field name="Ecompany" component={renderTextField} label="회사명"/></div>
