@@ -61,11 +61,6 @@ app.post('/sendEmail', (req, res) => {
 	*/
 });
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 13aab7ae64147abb2ceb7300d6b1a8451b1129a1
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
