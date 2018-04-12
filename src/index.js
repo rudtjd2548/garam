@@ -39,6 +39,7 @@ ReactDOM.render (
         <Route exact path="/" component={howtoServe} />
         <Route exact path="/" component={imgBoard} />
         <Route exact path="/" component={svg_map} />
+        <Route exact path="/" component={Feed} />
     		<Route path="/page" component={TopPic} />
     		<Route path="/page" component={LeftNav} />
     		<Switch>
