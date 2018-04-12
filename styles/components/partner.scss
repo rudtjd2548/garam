@@ -1,0 +1,70 @@
+@import '../utils';
+
+$dim: 250px;
+
+.partnerWrap {
+
+  @include detailPage();
+  ul {
+    padding: 0;
+    margin-top: 50px;
+    li {
+      list-style: none;
+      overflow: hidden;
+      margin-bottom: 20px;
+      .octagon {
+        float: left;
+        overflow: hidden;
+        width: $dim; height: $dim;
+        @include media("<huge") {width: 180px; height: 180px;}
+        @include media("<cus_smm") {
+          margin-left: 20px;
+        }
+      }
+      .inner {
+      	transform: rotate(45deg);
+        overflow: hidden;
+      	background: #ee8c25;
+      }
+      .pics {
+      	transform: rotate(-45deg);
+        width: $dim; height: $dim;
+      	background-repeat: no-repeat;
+      	background-position-x: center;
+      	background-position-y: center;
+      	background-size: cover;
+        @include media("<huge") {width: 180px; height: 180px;}
+      }
+      .ingrediants {
+        width: 50%;
+        float: left;
+        padding-left: 20px;
+        padding-top: 70px;
+
+        @include media("<huge") {padding-top: 43px;}
+        @include media("<medium") {width: 65%;}
+        @include media("<cus_smm") {
+          width: 100%;
+          padding-top: 10px;
+          padding-right: 20px;
+        }
+
+        h4 {
+          color: #333;
+          font-weight: 700;
+
+          @include media("<huge") {font-size: 17px;}
+        }
+        h5 {
+          color: #444;
+          line-height: 28px;
+          font-size: 16px;
+          @include media("<huge") {
+            line-height: 23px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

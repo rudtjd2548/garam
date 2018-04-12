@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -15,7 +15,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/fontawesome-free-solid'
 fontawesome.library.add(faBars);
 
-const bars = 
+const bars =
   <strong style={{
   fontSize:"38px",
   color:"#444"
@@ -43,9 +43,9 @@ export default class DrawerUndocked extends React.Component {
                   label= {bars}
                   onClick={this.handleToggle}
                   style= {{
-                    borderRadius:"50px", 
-                    height:"53px", 
-                    minWidth:"65px", 
+                    borderRadius:"50px",
+                    height:"53px",
+                    minWidth:"65px",
                     boxShadow:"0",
                     backgroundColor:"rgb(0,0,0)",
                     color:"#FFF"
@@ -63,28 +63,32 @@ export default class DrawerUndocked extends React.Component {
                   <h3 className={Dstyles.profileName}>참가람식자재</h3>
                   <Divider />
 
-                  <MenuItem onClick={this.handleClose}>
-                    <NavLink to="/page/IntroCompany" className={Dstyles.Dlink}>
+                  <Link to="/page/about" className={Dstyles.Dlink}>
+                    <MenuItem onClick={this.handleClose}>
                       회사소개
-                    </NavLink>
-                  </MenuItem>
+                    </MenuItem>
+                  </Link>
                   <Divider />
 
-                  <MenuItem onClick={this.handleClose}>
-                    <NavLink to="/page/emailForm" className={Dstyles.Dlink}>
+                  <Link to="/page/contactUs" className={Dstyles.Dlink}>
+                    <MenuItem onClick={this.handleClose}>
                       견적문의
-                    </NavLink>
-                  </MenuItem>
+                    </MenuItem>
+                  </Link>
                   <Divider />
 
-                  <MenuItem onClick={this.handleClose}>
-                    <NavLink to="/page" className={Dstyles.Dlink}>
+                  <Link to="/page/partner" className={Dstyles.Dlink}>
+                    <MenuItem onClick={this.handleClose}>
+                      거래업종
+                    </MenuItem>
+                  </Link>
+                  <Divider />
+
+                  <Link to="/page/findUs" className={Dstyles.Dlink}>
+                    <MenuItem onClick={this.handleClose}>
                       찾아오시는 길
-                    </NavLink>
-                  </MenuItem>
-                  <Divider />
-
-                  <MenuItem onClick={this.handleClose}>ENGLISH</MenuItem>
+                    </MenuItem>
+                  </Link>
                   <Divider />
                 </Drawer>
             </div>

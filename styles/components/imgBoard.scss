@@ -1,0 +1,65 @@
+@import '../utils';
+
+.IBWrap {
+  height: 360px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: cover;
+
+  h1 {
+    color: #EEE;
+    word-break:keep-all;
+    line-height: 50px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 70px;
+    margin-bottom: 10px;
+  }
+  h1:after {
+    content: "";
+    display: block;
+    width: 350px;
+    margin: 15px auto;
+    border-bottom: 2px solid $garamYellow;
+  }
+  h4 {
+    text-align: center;
+    line-height: 20px;
+    word-break:keep-all;
+    color: #EEE;
+    font-weight: 600;
+    padding-top: 50px;
+    font-size: 21px;
+  }
+  div {
+    text-align: center;
+    margin-top: 40px;
+
+    a {
+      color: #FFF;
+      background-color: rgba(255, 209, 62, 0.8);
+      border-radius: 5px 5px;
+      font-size: 20px;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: rgba(255, 209, 62, 0.5);
+    }
+  }
+  @include media("<cus_smm") {
+    h1 { font-size: 30px; line-height: 40px; }
+    h1:after { margin: 12px auto; width: 250px; }
+    h4 {
+      font-size: 19px;
+    }
+  }
+  @include media("<small") {
+    h4 {
+      line-height: 25px;
+      padding-top: 25px;
+    }
+  }
+}

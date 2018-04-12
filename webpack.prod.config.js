@@ -1,3 +1,5 @@
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var config = require('./webpack.config.js');
 var webpack = require('webpack');
 

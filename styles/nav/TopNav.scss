@@ -6,6 +6,9 @@
 	height: 90px;
 	margin: 0 auto;
 	border-bottom: 1px solid $garamYellow;
+	@include media("<cus_sm") {
+		margin-top: 10px;
+	}
 }
 .Navbar {
 	margin: 0 auto;
@@ -13,7 +16,7 @@
 	//border: 1px solid red;
 	position: relative;
 	overflow: hidden;
-	
+
 	@include media("<huge") {
 	width: 1024px;
 	}
@@ -35,22 +38,24 @@
 		width: 230px;
 	}
 	@include media("<huge") {
-	
+
 	}
 
 	@include media("<large") {
 		margin-left: 20px;
 	}
 
-	@include media("<medium") {
-	
+	@include media("<cus_sm") {
+		img {
+			width: 200px;
+		}
 	}
 }
 .NavMenu {
 	//border: 1px solid blue;
 	float: right;
 	margin: 40px 0 10px 0;
-	
+
 	ul {
 		list-style: none;
 		//border: 1px solid red;
@@ -63,11 +68,17 @@
 	    //border: 1px solid green;
 	}
 	ul li a {
-		color: #333;
-		font-weight: bold;
+		color: #444;
+		font-weight: 600;
   		text-decoration: none;
   		font-size: 14px;
   		letter-spacing:2px;
+	}
+	ul li:nth-child(3) {
+		a {
+			color: $garamGreen;
+			font-weight: bold;
+		}
 	}
 	ul li a:hover {
 		color: #DDD;

@@ -1,0 +1,68 @@
+@import '../utils';
+
+.instaWrap {
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #DDD;
+  max-width: 100%;
+  padding: 40px 0;
+
+  h3 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #AAA;
+    img {
+      width: 200px;
+    }
+  }
+
+  h4 {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: #777;
+    }
+    a:hover {
+      color: $garamYellow;
+    }
+  }
+
+  .leftBox {
+    max-width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    @include media("<hhuge") {
+      max-width: 90%;
+    }
+    @include media("<large") {
+      max-width: 98%;
+    }
+    div {
+      position: relative;
+      float: left;
+      width: 20%;
+      display: flex;
+      padding: 10px;
+      @include media("<huge") {
+        width: 25%;
+        padding: 7px;
+      }
+      @include media("<large") {
+        width: 33.33333%;
+      }
+      @include media("<medium") {
+        padding: 5px;
+      }
+      @include media("<cus_sm") {
+        padding: 2px;
+      }
+      img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: contain;
+        min-height: 0;
+      }
+    }
+  }
+}

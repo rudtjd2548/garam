@@ -1,16 +1,21 @@
 @import '~open-color/open-color';
 @import '~include-media/dist/include-media';
 
-$garamYellow: #FFD13E;
+$garamGreen: #20AD8D;
+$garamYellow: #FFD13E; //rgba(255, 209, 62, 1)
+$borderLine: #EEE;
 
 $breakpoints: (
   small: 376px,
   cus_sm: 465px,
+  cus_imgsizing: 515px,
   cus_smm: 610px,
-  medium: 768px, 
+  medium: 768px,
   cus_ml: 880px,
-  large: 1024px, 
-  huge: 1250px
+  large: 1024px,
+  huge: 1250px,
+  lalge2: 1200px,
+  hhuge: 1400px,
 );
 
 @mixin place-at-center() {
@@ -19,3 +24,33 @@ $breakpoints: (
   transform: translate(-50%, -50%);
 }
 
+
+@mixin detailPage() {
+  border-top: 8px solid $garamYellow;
+  border-left: 1px solid $borderLine;
+	padding: 20px 20px 0 20px;
+	width: 68%;
+	float: right;
+  @include media("<huge") {
+	   width: 75%;
+  }
+	@include media("<cus_ml") {
+		width: 100%;
+		border-top: 10px solid $garamYellow;
+	}
+  .Elink {
+		color: #444;
+	}
+	.Elink:hover {
+		color: $garamYellow;
+	}
+	strong {
+		font-size: 12px;
+		font-weight: 800;
+		color: $garamYellow;
+	}
+	b {
+		font-size: 13px;
+		color: #666;
+	}
+}

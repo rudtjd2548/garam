@@ -82,7 +82,7 @@ export default class TabsExampleSwipeable extends React.Component {
                         정직한 단가
                       </strong>
                       <div>
-                        참가람식자재는 종합식재료업체로 각종 농,수,축,공산품을 정직한 
+                        참가람식자재는 종합식재료업체로 각종 농,수,축,공산품을 정직한
                         단가로 납품하고 있습니다.
                       </div>
                     </div>
@@ -94,7 +94,7 @@ export default class TabsExampleSwipeable extends React.Component {
                         신선한 재료
                       </strong>
                       <div>
-                        참가람식자재는 매일 새벽 가락동 농수산시장에 경매된 신선한 재료만을 유통, 
+                        참가람식자재는 매일 새벽 가락동 농수산시장에 경매된 신선한 재료만을 유통,
                         납품합니다.
                       </div>
                     </div>
@@ -106,7 +106,7 @@ export default class TabsExampleSwipeable extends React.Component {
                         최상의 서비스
                       </strong>
                       <div>
-                        참가람식자재는 믿을 수 있는 식자재와 더불어 직원들이 
+                        참가람식자재는 믿을 수 있는 식자재와 더불어 직원들이
                         최상의 서비스를 약속드립니다.
                       </div>
                     </div>

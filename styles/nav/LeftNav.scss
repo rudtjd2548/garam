@@ -1,12 +1,12 @@
 @import '../utils';
 
-$borderLine: #EEE;
-
 .Lwrapper {
-  border-top: 4px solid #999;
+  border-top: 10px solid #999;
   width: 32%;
   float:left;
-
+  @include media("<huge") {
+	width: 25%;
+  }
   @include media("<cus_ml") {
 	display: none;
   }
@@ -17,22 +17,22 @@ $borderLine: #EEE;
     float: right;
     padding: 10px 0px;
 
-  @include media("<huge") {
-	width: 100%;
-	}
+    @include media("<huge") {
+  	width: 100%;
+  	}
 
     li {
       border-bottom: 1px solid $borderLine;
-  
-  	li:last-child {
-      border: none;
-  	}
+
+    	li:last-child {
+        border: none;
+    	}
 
       a {
       	display: block;
         padding: 30px;
         color: #333;
-        font-weight: bold;
+        font-weight: 600;
         text-decoration: none;
         font-size: 16px;
         line-height:20px;
@@ -53,12 +53,20 @@ a.Llink:hover {
 	padding: 30px 0;
 	text-align: center;
 	h1 {
-		font-size: 30px;
+		font-size: 27px;
 		font-weight: 800;
 
 	}
 	h2 {
-		font-weight: 700;
-		color: #526176;
-	}
+    color: #526176;
+    font-size: 25px;
+    font-weight: 700;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 1s linear infinite;
+    @keyframes shine {
+      from { -webkit-mask-position: 150%; }
+      to { -webkit-mask-position: -50%; }
+    }
+  }
 }

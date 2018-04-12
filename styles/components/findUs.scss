@@ -1,0 +1,81 @@
+@import '../utils';
+
+$textColor: #333;
+
+.findUsWrap {
+
+  @include detailPage();
+
+  h2 {
+		padding: 10px 0 30px 0;
+		font-weight: 600;
+    @include media("<cus_sm") {
+       font-size: 25px;
+    }
+	}
+  .underMapSize {
+    position: relative;
+    width: 80%;
+    @include media("<huge") {
+  	   width: 100%;
+    }
+  }
+  .leftBox {
+    float: left;
+    @include media("<huge") {
+      float: none;
+  	  text-align: center;
+    }
+    @include media("<huge") {
+  	  text-align: left;
+    }
+    big {
+      font-weight: 600;
+    }
+    h3 {
+      color: #444;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 35px;
+      padding-bottom: 15px;
+      @include media("<huge") {
+    	   border-bottom: 1px solid #ccc;
+      }
+    }
+    h5 {
+      color: #444;
+      font-size: 20px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 40px;
+      padding-bottom: 15px;
+      @include media("<huge") {
+    	   border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+  .rightBox {
+    float: right;
+    text-align: right;
+    @include media("<huge") {
+      float: none;
+  	  text-align: center;
+    }
+    @include media("<huge") {
+  	  text-align: left;
+    }
+    h5 {
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+    h6 {
+      b {
+        color: #005199;
+        font-size: 17px;
+      }
+      line-height: 35px;
+      font-size: 16px;
+    }
+  }
+}

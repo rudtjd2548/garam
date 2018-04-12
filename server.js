@@ -28,32 +28,37 @@ app.post('/sendEmail', (req, res) => {
 	var Enotes = req.body.Enotes.split('\n').join('<br />');
 	//res.send(Ename +', ' + Ecompany +', ' + Ephone +', ' + Eemail +', ' + Enotes);
 
-	let transporter = nodeMailer.createTransport(smtpTransport({ 
-		service: 'gmail', 
-		auth: { 
-			user: 'a92667441@gmail.com', 
-			pass: '' 
-		} 
-	})) 
-
-	let mailOptions = { 
-		from: '가람푸드 <a92667441@gmail.com>', 
-		to: '@naver.com', 
+	let transporter = nodeMailer.createTransport(smtpTransport({
+		service: 'gmail',
+		auth: {
+			user: 'a92667441@gmail.com',
+			pass: 'ekssha2548!'
+		}
+	}))
+	let mailToList = [
+		'gogo3733@naver.com',
+		'khg1659@hanmail.net',
+		'xy1131@naver.com'
+	]
+	let mailOptions = {
+		from: '가람푸드 <a92667441@gmail.com>',
+		to: mailToList,
 		subject: Ename + ' 님께서 견적문의 요청입니다.',
 		html: '<p>'
 				+	'<strong>업체명 : </strong>' + Ecompany + '<br />'
-				+	'<strong>전화번호 : </strong>' + Ephone + '<br />'
+				+	'<strong>전화번호 : </strong><a href="tel:' + Ephone + '"> '+ Ephone +'</a><br />'
 				+	'<strong>이메일 : </strong>' + Eemail + '<br />'
 				+	'<strong>문의내용 : </strong><br />' + Enotes + '<br />'
 			+ '</p>'
-	} 
+	}
 
-	transporter.sendMail(mailOptions, (error, info) => { 
-		if (error) { 
-			return console.log(error) 
-		} 
-		console.log('Message %s sent: %s', info.messageId, info.response) 
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			return console.log(error)
+		}
+		console.log('Message %s sent: %s', info.messageId, info.response)
 	})
+	 return res.send('ok')
 	/*
 	출처
 	1. http://jsonobject.tistory.com/298

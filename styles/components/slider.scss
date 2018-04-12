@@ -1,3 +1,50 @@
-Carousel {
-	border: 3px solid red;
+@import '../utils';
+
+.Swrap {
+  float: left;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  margin-left: 19%;
+  margin-right: 19%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  @include media("<huge") {
+    width: 80%;
+    margin-left: 9%;
+    margin-right: 9%;
+	}
+  @include media("<medium") {
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 4%;
+	}
+  @include media("<cus_sm") {
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin: 10px 0;
+	}
+
+  .Sbox {
+    max-width: 150px;
+    height: 100px;
+    padding: 27px 0;
+    position:relative;
+
+    img {
+      padding: 0 30px;
+    }
+  }
+  div {
+    div {
+      div {
+        display: inline-block;
+        div {
+            max-width: 150px;
+        }
+      }
+    }
+  }
 }

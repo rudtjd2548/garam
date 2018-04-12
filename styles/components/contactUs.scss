@@ -1,36 +1,12 @@
 @import '../utils';
 
-$borderLine: #EEE;
-
 .FormWrap {
-	border-top: 4px solid $garamYellow;
-	border-left: 1px solid $borderLine;
-	padding: 20px;
-	background-color: #FDFDFD;
-	width: 68%;
-	float: right;
-	@include media("<cus_ml") {
-		width: 100%;
-		border-top: 4px solid #333;
-	}
-	.Elink {
-		color: #444;
-	}
-	.Elink:hover {
-		color: $garamYellow;
-	}
-	strong {
-		font-size: 12px;
-		font-weight: 800;
-		color: $garamYellow;
-	}
-	b {
-		font-size: 13px;
-		color: #666;
-	}
+
+	@include detailPage();
+
 	h2 {
 		padding: 10px 0;
-		font-weight: 700;
+		font-weight: 600;
 	}
 	h5 {
 		width: 570px;
@@ -56,7 +32,8 @@ form {
 	width: 500px;
 	padding: 30px;
 	padding-left: 60px;
-	background-color: #FFF;
+	background-color: #FAFAFA;
+	margin-bottom: 10px;
 
 
 	@include media("<cus_smm") {
@@ -64,6 +41,11 @@ form {
 		padding: 5%;
 		padding-left: 10%;
 	}
+}
+
+.emailSent{
+	padding: 30px 0;
+	color: #3BA56E;
 }
 
 // 제출하기 버튼 CSS

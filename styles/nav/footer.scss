@@ -1,0 +1,121 @@
+@import '../utils';
+
+.footWrap {
+  border-top: 6px solid $garamYellow;
+  float: left;
+  position: relative;
+  width: 100%;
+  background-color: #444;
+  padding: 30px 0;
+
+  .topUl {
+    width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+    @include media("<huge") {
+         width: 100%;
+         padding: 20px;
+    }
+    ul {
+
+      margin: 0;
+      padding: 0;
+      width: 25%;
+      float: left;
+      list-style: none;
+      @include media("<medium") {
+           width: 50%;
+      }
+      @include media("<cus_sm") {
+           width: 100%;
+           margin-bottom: 5px;
+      }
+      li {
+        color: #FFF;
+        line-height: 30px;
+        margin: 0;
+        font-size: 13px;
+
+        b {
+          color: $garamYellow;
+          font-size: 17px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .yellowBg {
+    background-color: $garamYellow;
+
+    .bottomUl {
+      width: 1100px;
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+      @include media("<huge") {
+           width: 100%;
+           padding: 0 20px;
+      }
+      ul {
+        margin: 0 auto;
+        padding: 0;
+        margin: 5px 0;
+        list-style: none;
+        float: left;
+        @include media("<cus_sm") {
+             width: 100%;
+        }
+        li {
+          color: #444;
+          font-weight: 600;
+          border-left: 1px solid #555;
+          float: left;
+          padding: 5px 20px;
+
+          font-size: 14px;
+          @include media("<medium") {
+               font-size: 12px;
+               vertical-align: middle;
+          }
+          @include media("<cus_sm") {
+               vertical-align: middle;
+               padding: 5px 12px;
+          }
+          @include media("<small") {
+              padding: 5px 10px;
+               font-size: 10px;
+          }
+          a {
+            cursor: pointer;
+            text-decoration: none;
+          }
+          .Flink {
+            text-decoration: none;
+          }
+        }
+        li:last-child {
+          border-right: 1px solid #555;
+      	}
+      }
+    }
+  }
+  .copyRight {
+    width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    @include media("<huge") {
+         width: 100%;
+         padding: 20px;
+    }
+    p {
+      color: #FFF;
+      margin: 0;
+      padding: 15px 0;
+      font-size: 11px;
+    }
+  }
+}
