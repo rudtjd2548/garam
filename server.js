@@ -6,7 +6,7 @@ const smtpTransport = require('nodemailer-smtp-transport')
 
 var bodyParser = require('body-parser');
 var app = express();
-var PORT = process.env.PORT || 8081
+var PORT = process.env.PORT || 8080
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -31,14 +31,14 @@ app.post('/sendEmail', (req, res) => {
 	let transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'gmail',
 		auth: {
-			user: 'a92667441@gmail.com',
-			pass: 'ekssha2548!'
+			user: '',
+			pass: ''
 		}
 	}))
 	let mailToList = [
-		'gogo3733@naver.com',
-		'khg1659@hanmail.net',
-		'xy1131@naver.com'
+		'',
+		'',
+		''
 	]
 	let mailOptions = {
 		from: '가람푸드 <a92667441@gmail.com>',
@@ -66,11 +66,13 @@ app.post('/sendEmail', (req, res) => {
 	*/
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/dist/index.html'));
-});
+app.use(express.static(__dirname + '/dist'))
 
-app.use(express.static(path.join(__dirname, 'dist')));
+
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+})
+
 app.listen(PORT, function(err) {
   if(err)
     console.error(err);

@@ -30,11 +30,13 @@ import imgBoard from './components/imgBoard'
 import howtoServe from './components/howtoServe'
 import svg_map from './components/svg_map'
 
+import phoneNumber from './components/phoneNumber'
+
 ReactDOM.render (
   <Provider store={store}>
     <Router>
       <div>
-    		<TopNav />
+        <Route path="/" component={TopNav} />
   	    <Route exact path="/" component={BtnNav} />
         <Route exact path="/" component={howtoServe} />
         <Route exact path="/" component={imgBoard} />
@@ -48,8 +50,9 @@ ReactDOM.render (
     			<Route path="/page/contactUs" component={contactUs} />
     			<Route path="/page/findUs" component={findUs} />
     		</Switch>
-        <Slider1 />
-        <Footer />
+        <Route path="/" component={Slider1} />
+        <Route path="/" component={phoneNumber} />
+        <Route path="/" component={Footer} />
       </div>
     </Router>
   </Provider>,

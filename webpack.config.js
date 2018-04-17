@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -67,7 +66,7 @@ module.exports = {
   },
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, '/dist/'),
+    path: __dirname + '/dist',
     publicPath: '/'
   },
   resolve: {
@@ -83,14 +82,13 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('development')
       }
     }),
     new ExtractTextPlugin('style.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     //new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),

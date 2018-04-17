@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Fstyles from "../../styles/components/findUs.scss"
 import { NavLink } from 'react-router-dom'
+import DocumentMeta from 'react-document-meta';
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/fontawesome-free-solid'
@@ -19,7 +20,19 @@ class ScrollToTopOnMount extends Component {
 
 export default class findUs extends Component {
   render () {
+    const meta = {
+      title: '참가람 찾아오시는 길',
+      description: '일반 주소: 경기도 남양주시 진건읍 용정리 301번지 / 도로명 주소: 경기도 남양주시 진건읍 진건우회로 242번길 6-94',
+      canonical: 'http://garamfood.org/page/findUs',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          title: '참가람 찾아오시는 길'
+        }
+      }
+    };
     return (
+      <DocumentMeta {...meta}>
         <div className={Fstyles.findUsWrap}>
           <ScrollToTopOnMount/>
           <h4>
@@ -54,6 +67,7 @@ export default class findUs extends Component {
 
           </div>
         </div>
+      </DocumentMeta>
       )
   }
 }

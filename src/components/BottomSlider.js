@@ -60,49 +60,49 @@ export default class Slider1 extends Component {
       <div className={Sstyles.Swrap}>
         <Slider {...settings}>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo01.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo01.gif" alt="오뚜기" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo02.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo02.gif" alt="롯데삼강" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo03.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo03.gif" alt="동서식품" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo04.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo04.gif" alt="씨제이" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo05.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo05.gif" alt="부산어묵" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo06.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo06.gif" alt="곰표" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo07.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo07.gif" alt="미원" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo08.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo08.gif" alt="대상선" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo09.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo09.gif" alt="면나라" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo10.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo10.gif" alt="해표" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo11.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo11.gif" alt="해찬들" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo12.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo12.gif" alt="진주햄" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo13.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo13.gif" alt="사골김" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo14.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo14.gif" alt="샘표" />
           </div>
           <div className={Sstyles.Sbox}>
-            <img src="../assets/images/bottomLogo/bottom_logo15.gif" />
+            <img src="../assets/images/bottomLogo/bottom_logo15.gif" alt="사조" />
           </div>
         </Slider>
       </div>

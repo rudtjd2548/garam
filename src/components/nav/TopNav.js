@@ -18,7 +18,7 @@ export default class TopNav extends Component {
 
   	  	  <div className={styles.logoBox}>
   	        <Link to="/">
-  		        <img src={logo} className={styles.logo} />
+  		        <img src={logo} alt="로고이미지" className={styles.logo} />
             </Link>
   		    </div>
 

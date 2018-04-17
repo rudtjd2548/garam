@@ -6,6 +6,7 @@ import TextField from 'material-ui/TextField'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { normalizePhone, validate } from './validationComp.js'
 import Estyles from "../../styles/components/contactUs.scss"
+import DocumentMeta from 'react-document-meta';
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faHome, faCheck } from '@fortawesome/fontawesome-free-solid'
@@ -46,7 +47,7 @@ class MaterialUiForm extends React.Component {
   }
 
   handleSubmit = (values) => {
-    axios.post('http://www.garamfood.org:8081/sendEmail', values)
+    axios.post('http://www.garamfood.org:8080/sendEmail', values)
     .then((res) => {
       //this.props.history.push('')
       this.setState({
@@ -66,8 +67,20 @@ class MaterialUiForm extends React.Component {
     ) : (
       <div><button className={Estyles.Ebutton} type="submit" disabled={pristine || submitting}>제출하기</button></div>
     )
+    const meta = {
+      title: '참가람 견적문의하기',
+      description: '참가람 고객문의 페이지입니다. 궁금하신점 참가람 이메일로 문의해주십시오. 빠른 고객문의는 1577-5709로 전화주시면 바로 상담하실 수 있습니다. 감사합니다.',
+      canonical: 'http://garamfood.org/page/contactUs',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          title: '참가람 견적문의하기'
+        }
+      }
+    };
 
     return (
+      <DocumentMeta {...meta}>
       <div className={Estyles.FormWrap}>
         <ScrollToTopOnMount/>
         <h4>
@@ -94,6 +107,7 @@ class MaterialUiForm extends React.Component {
           </form>
         </MuiThemeProvider>
       </div>
+    </DocumentMeta>
     )
   }
 }

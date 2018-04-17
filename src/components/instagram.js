@@ -44,7 +44,7 @@ class Feed extends Component {
               const link = post.link
               return (
                 <div key={post.id}>
-                  <a href={post.link} target="_blank"><img src={imageUrl} /></a>
+                  <a href={post.link} target="_blank"><img src={imageUrl} alt="인스타 이미지"/></a>
                 </div>
               )
             })

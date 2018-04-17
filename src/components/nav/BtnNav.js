@@ -132,7 +132,7 @@ export default class TabsExampleSwipeable extends React.Component {
                     <div className={Bstyles.Bwidth}>
                       <div className={Bstyles.HalfLeftBox}>
                         <StyleRoot>
-                        <h2 style={styles.fadeIn} className={Bstyles.headline}>가람푸드는 제조공장 및 도매업체로부터</h2>
+                        <h2 style={styles.fadeIn} className={Bstyles.headline}>참가람은 제조공장 및 도매업체로부터</h2>
                         <h2 style={styles.fadeIn} className={Bstyles.subline}>가장 저렴한 가격에 식자재를 매입하여</h2>
                         <h2 style={styles.fadeIn} className={Bstyles.bigline}><span>정직한 유통</span>을 하며</h2>
                         <h2 style={styles.fadeIn} className={Bstyles.bottomline}>다양한 품목을 취급합니다.</h2>
@@ -145,7 +145,7 @@ export default class TabsExampleSwipeable extends React.Component {
                       <div className={Bstyles.HalfLeftBox}>
                         <StyleRoot>
                         <h2 style={styles.fadeIn} className={Bstyles.headline}></h2>
-                        <h2 style={styles.fadeIn} className={Bstyles.subline}>가람푸드의 다양한 왕도매 식자재로</h2>
+                        <h2 style={styles.fadeIn} className={Bstyles.subline}>참가람의 다양한 왕도매 식자재로</h2>
                         <h2 style={styles.fadeIn} className={Bstyles.bigline}><span>식자재 매입고민</span>을</h2>
                         <h2 style={styles.fadeIn} className={Bstyles.bottomline}>한방에 해결해드리겠습니다.</h2>
                         </StyleRoot>

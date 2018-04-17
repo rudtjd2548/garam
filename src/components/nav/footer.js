@@ -20,7 +20,7 @@ export default class Footer extends Component {
           <div className={Fstyles.topUl}>
             <ul>
               <li><b>INFORMATION</b></li>
-              <li>상호명: (주)참가람식자재</li>
+              <li>상호명: (주)참가람푸드시스템</li>
               <li>대표자명: 김현규</li>
               <li>주소: 남양주시 진건읍 용정리 301</li>
               <li>대표전화: 1577-5709</li>
@@ -32,8 +32,8 @@ export default class Footer extends Component {
             </ul>
             <ul>
               <li><b>WEB MASTER</b></li>
-              <li>e-mail: khg1659@hanmail.net</li>
-              <li>개인정보보호정책 책임자: 김현규</li>
+              <li>e-mail: a92667441@gmail.com</li>
+              <li>웹사이트 책임자: 진경성</li>
             </ul>
             <ul>
               <li><b>BANK INFO</b></li>

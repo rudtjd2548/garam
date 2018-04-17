@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
+import DocumentMeta from 'react-document-meta';
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/fontawesome-free-solid'
@@ -28,7 +29,19 @@ export default class About extends Component {
     var style3 = {backgroundImage: `url('../../assets/images/foodType/chinese.jpg')`}
     var style4 = {backgroundImage: `url('../../assets/images/foodType/western.jpg')`}
     var style5 = {backgroundImage: `url('../../assets/images/foodType/bunsik.jpg')`}
+    const meta = {
+      title: '참가람 거래업종 및 취급품목',
+      description: '참가람은 한식/일식/중식/양식/분식 모두 취급하는 종합 식자재 업체로서 최고의 가격과 서비스로 제공해드리고 있습니다. 많은 관심 부탁드립니다.',
+      canonical: 'http://garamfood.org/page/partner',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          title: '참가람 거래업종 및 취급품목'
+        }
+      }
+    };
     return (
+      <DocumentMeta {...meta}>
         <div className={Pstyles.partnerWrap}>
           <ScrollToTopOnMount/>
           <h4>
@@ -100,6 +113,7 @@ export default class About extends Component {
             </li>
           </ul>
         </div>
+      </DocumentMeta>
       )
   }
 }

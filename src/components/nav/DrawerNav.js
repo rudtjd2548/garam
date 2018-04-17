@@ -57,7 +57,7 @@ export default class DrawerUndocked extends React.Component {
                   open={this.state.open}
                   onRequestChange={(open) => this.setState({open})}
                 >
-                  <img src={company} style={{width:100+'%'}}/>
+                  <img src={company} alt="회사겉모습" style={{width:100+'%'}}/>
                   <div className={Dstyles.profileImg}><img src={ceo} /></div>
                   <h3 className={Dstyles.profileText}><a href="tel:031-1577-5709">1577-5709</a></h3>
                   <h3 className={Dstyles.profileName}>참가람식자재</h3>

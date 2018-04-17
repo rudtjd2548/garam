@@ -78,6 +78,7 @@
       padding: 20px 0;
       word-break:keep-all;
       line-height: 30px;
+      h1 {display: none;}
       @include media("<cus_sm") {
         padding: 0 15px;
         font-size: 25px;
@@ -95,6 +96,7 @@
       text-decoration: underline;
     }
   }
+  h1 {display: none;}
 }
 
 .Svg_normal {

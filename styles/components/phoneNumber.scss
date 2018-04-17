@@ -1,0 +1,43 @@
+@import '../utils';
+
+@media (min-width:465px){
+  .phoneWrap {
+    display: none;
+  }
+}
+@include media("<cus_sm") {
+  .phoneWrap {
+    position: fixed;
+    left:0;
+    bottom:7px;
+    right:0;
+    text-align: center;
+    z-index: 5000;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.3);
+    border-left: 8px solid #E86A5B;
+    border-right: 8px solid #E86A5B;
+
+    p {
+      margin: 0; padding: 0;
+
+      a {
+        display: block;
+        font-size: 22px;
+        font-weight: bold;
+        color: #E86A5B;
+        width: 100%;
+        padding: 10px 0;
+        span {
+          font-weight: bold !important;
+          font-size: 30px;
+          letter-spacing: -1px;
+          color: $garamYellow;
+        }
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
