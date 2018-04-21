@@ -28,7 +28,7 @@ import Slider1 from './components/BottomSlider'
 import Feed from './components/instagram'
 import imgBoard from './components/imgBoard'
 import howtoServe from './components/howtoServe'
-import svg_map from './components/svg_map'
+import svgMap from './components/svg_map'
 
 import phoneNumber from './components/phoneNumber'
 
@@ -40,7 +40,7 @@ ReactDOM.render (
   	    <Route exact path="/" component={BtnNav} />
         <Route exact path="/" component={howtoServe} />
         <Route exact path="/" component={imgBoard} />
-        <Route exact path="/" component={svg_map} />
+        <Route exact path="/" component={svgMap} />
         <Route exact path="/" component={Feed} />
     		<Route path="/page" component={TopPic} />
     		<Route path="/page" component={LeftNav} />

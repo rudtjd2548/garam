@@ -9,7 +9,7 @@ class phoneNumber extends Component {
     return (
       <div className={phoneStyle.phoneWrap}>
         <p><a href="tel:1577-5709">
-          <FontAwesomeIcon icon={["far", "hand-point-right"]} /> <span>1577-5709</span> <FontAwesomeIcon icon={["far", "hand-point-left"]}/>
+          바로연결 : <span>1577-5709</span>
         </a></p>
       </div>
     )

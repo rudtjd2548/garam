@@ -1481,15 +1481,7 @@ form {
           font-size: 15px; }
         .styles-components-howtoServe__Howwrap--3ZquI .styles-components-howtoServe__textBox--1_Sp6 div h5 {
           font-size: 12px; } }
-.styles-components-svgMap__ie9--3BAiK img[src$=".svg"] {
-  width: 100%; }
-
-/* 2 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  img[src$=".svg"] {
-    width: 100%; } }
-
-.styles-components-svgMap__SvgWrap--KDwTQ {
+.styles-components-svgMap__Wrapper--28S-J {
   width: 100%;
   margin: 30px 0; }
 
@@ -1497,6 +1489,15 @@ form {
   position: relative;
   width: 50%;
   margin: 0 auto; }
+  @media (max-width: 1199px) {
+    .styles-components-svgMap__SvgDiv--2JHq_ {
+      width: 70%; } }
+  @media (max-width: 767px) {
+    .styles-components-svgMap__SvgDiv--2JHq_ {
+      width: 90%; } }
+  @media (max-width: 464px) {
+    .styles-components-svgMap__SvgDiv--2JHq_ {
+      width: 98%; } }
   .styles-components-svgMap__SvgDiv--2JHq_ svg {
     border: 2px solid #EFEFEF;
     -o-object-fit: contain;
@@ -1513,18 +1514,9 @@ form {
     @media (max-width: 464px) {
       .styles-components-svgMap__SvgDiv--2JHq_ svg {
         height: 200px; } }
-  @media (max-width: 1199px) {
-    .styles-components-svgMap__SvgDiv--2JHq_ {
-      width: 70%; } }
-  @media (max-width: 767px) {
-    .styles-components-svgMap__SvgDiv--2JHq_ {
-      width: 90%; } }
-  @media (max-width: 464px) {
-    .styles-components-svgMap__SvgDiv--2JHq_ {
-      width: 98%; } }
   .styles-components-svgMap__SvgDiv--2JHq_ h1 {
-    font-family: 'East Sea Dokdo', cursive;
     color: #444;
+    font-family: 'East Sea Dokdo', cursive;
     font-size: 60px;
     padding: 20px 0;
     text-align: center;
@@ -1540,13 +1532,13 @@ form {
         width: 80%;
         font-size: 40px; } }
 
-.styles-components-svgMap__SvgList--y8MjB {
+.styles-components-svgMap__BottomBar--1ZrZq {
   width: 100%; }
-  .styles-components-svgMap__SvgList--y8MjB ul {
+  .styles-components-svgMap__BottomBar--1ZrZq ul {
     overflow: hidden;
     margin: 0 auto;
     padding: 0; }
-    .styles-components-svgMap__SvgList--y8MjB ul li {
+    .styles-components-svgMap__BottomBar--1ZrZq ul li {
       font-family: 'East Sea Dokdo', cursive;
       font-size: 30px;
       list-style: none;
@@ -1556,43 +1548,56 @@ form {
       padding: 20px 0;
       word-break: keep-all;
       line-height: 30px; }
-      .styles-components-svgMap__SvgList--y8MjB ul li h1 {
+      .styles-components-svgMap__BottomBar--1ZrZq ul li h1 {
         display: none; }
       @media (max-width: 464px) {
-        .styles-components-svgMap__SvgList--y8MjB ul li {
+        .styles-components-svgMap__BottomBar--1ZrZq ul li {
           padding: 0 15px;
           font-size: 25px; } }
       @media (max-width: 514px) {
-        .styles-components-svgMap__SvgList--y8MjB ul li {
+        .styles-components-svgMap__BottomBar--1ZrZq ul li {
           padding: 0 15px;
           line-height: 25px; } }
-    .styles-components-svgMap__SvgList--y8MjB ul li:first-child {
+    .styles-components-svgMap__BottomBar--1ZrZq ul li:first-child {
       color: #E86A5B; }
-    .styles-components-svgMap__SvgList--y8MjB ul li:nth-child(2) {
+    .styles-components-svgMap__BottomBar--1ZrZq ul li:nth-child(2) {
       color: #FFBC00; }
-    .styles-components-svgMap__SvgList--y8MjB ul li:nth-child(3) {
+    .styles-components-svgMap__BottomBar--1ZrZq ul li:nth-child(3) {
       color: #E18538; }
-    .styles-components-svgMap__SvgList--y8MjB ul li:last-child {
+    .styles-components-svgMap__BottomBar--1ZrZq ul li:last-child {
       color: #4FB4B6; }
-    .styles-components-svgMap__SvgList--y8MjB ul li:hover {
+    .styles-components-svgMap__BottomBar--1ZrZq ul li:hover {
       text-decoration: underline; }
-  .styles-components-svgMap__SvgList--y8MjB h1 {
+  .styles-components-svgMap__BottomBar--1ZrZq h1 {
     display: none; }
 
-.styles-components-svgMap__Svg_normal--lBuqJ {
-  fill: #EEE; }
+.styles-components-svgMap__svg_g_active--4QYDs {
+  stroke: #FFF;
+  stroke-width: 3;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 20;
+  -webkit-animation: styles-components-svgMap__draw--3Cdwq 1.2s infinite linear;
+          animation: styles-components-svgMap__draw--3Cdwq 1.2s infinite linear; }
 
-.styles-components-svgMap__Svg_kangnam--292mU {
-  fill: #E86A5B; }
+@-webkit-keyframes styles-components-svgMap__draw--3Cdwq {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: 20; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0; } }
 
-.styles-components-svgMap__Svg_kangbook--24u8i {
-  fill: #FFBC00; }
-
-.styles-components-svgMap__Svg_guri--3riH5 {
-  fill: #E18538; }
-
-.styles-components-svgMap__Svg_hanam--Tpcd3 {
-  fill: #4FB4B6; }
+@keyframes styles-components-svgMap__draw--3Cdwq {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: 20; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0; } }
 @media (min-width: 465px) {
   .styles-components-phoneNumber__phoneWrap--2rKFR {
     display: none; } }
@@ -1613,15 +1618,17 @@ form {
       margin: 0;
       padding: 0; }
       .styles-components-phoneNumber__phoneWrap--2rKFR p a {
+        font-family: 'East Sea Dokdo', cursive;
         display: block;
-        font-size: 22px;
+        font-size: 37px;
         font-weight: bold;
         color: #E86A5B;
         width: 100%;
-        padding: 10px 0; }
+        padding: 0;
+        padding-bottom: 5px; }
         .styles-components-phoneNumber__phoneWrap--2rKFR p a span {
-          font-weight: bold !important;
-          font-size: 30px;
+          font-weight: bold;
+          font-size: 45px;
           letter-spacing: -1px;
           color: #FFD13E; }
       .styles-components-phoneNumber__phoneWrap--2rKFR p a:hover {
