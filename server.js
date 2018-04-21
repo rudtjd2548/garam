@@ -31,8 +31,8 @@ app.post('/sendEmail', (req, res) => {
 	let transporter = nodeMailer.createTransport(smtpTransport({
 		service: 'gmail',
 		auth: {
-			user: 'a92667441@gmail.com',
-			pass: 'ekssha7441!'
+			user: '',
+			pass: ''
 		}
 	}))
 	let mailToList = [
